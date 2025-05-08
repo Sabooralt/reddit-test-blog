@@ -1,0 +1,7 @@
+@import "@fontsource/instrument-serif";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+ @apply font-base h-[200vh]
+}
