@@ -1,6 +1,7 @@
 export default function InnerSection() {
   return (
-    <div className="h-screen">
+    <div className="h-[90vh]">
+        
       <div className="fixed -z-10 grid place-items-center justify-center py-20 bg-primary text-secondary w-full">
         <div>
           <div className="w-32 absolute right-12 -z-10 -top-10">
