@@ -1,9 +1,8 @@
-import { SlidingTextCTA } from "./SlidingTextCTA";
 
 export default function BlogSection() {
   return (
-    <section className="w-full pt-5 bg-white">
-      <div className="w-full px-2 h-[80vh] overflow-hidden relative">
+    <section className="w-full px-2 pt-5 bg-white">
+      <div className="w-full sm:px-2 h-[80vh] overflow-hidden relative">
         <img
           className="size-full object-cover"
           src="https://cdn.prod.website-files.com/672a1dc3f9c27f98c24c3703/673355c9219625249d17bf76_service-1-big.avif"
@@ -87,8 +86,6 @@ export default function BlogSection() {
           decisions about their content management strategy.
         </p>
       </div>
-
-      <SlidingTextCTA />
     </section>
   );
 }

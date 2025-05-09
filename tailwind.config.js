@@ -12,7 +12,7 @@ export default {
         gray: "#d9dae2",
       },
       animation: {
-        marquee: "marquee 200s linear infinite",
+        marquee: "marquee 500s linear infinite",
       },
       keyframes: {
         marquee: {
