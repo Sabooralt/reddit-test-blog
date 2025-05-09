@@ -6,7 +6,7 @@ export const SlidingTextCTA = () => {
         {Array.from({ length: 19 }).map((_, i) => (
           <span
             key={i}
-            className="text-8xl sm:text-[200px] md::text-[300px] font-bold leading-none uppercase flex items-center"
+            className="text-8xl md:text-[300px] font-bold leading-none uppercase flex items-center"
           >
             Work with us
             <span className="mx-10 inline-block w-[200px] h-[2px] group-hover:bg-black bg-gray/50" />
