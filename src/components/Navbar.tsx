@@ -17,7 +17,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="relative  bg-primary text-white p-8">
+    <nav className="relative bg-primary text-white p-8">
       <div className="flex justify-between items-center">
         <div className="w-[70px]">
           <img
@@ -28,14 +28,14 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Nav */}
-        <ul className="hidden md:flex flex-row space-x-6 text-secondary text-xl font-medium">
+        <ul className="hidden md:flex flex-row gap-1 text-secondary text-xl font-medium">
           {navItems.map((item, index) => (
             <Link to={item.link} key={index}>
               <li className="relative flex flex-row cursor-pointer group overflow-hidden">
                 <span className="block transition-transform duration-300 group-hover:-translate-y-full">
                   {item.name}
                 </span>
-                <span>,</span>
+                {index !== navItems.length - 1 && <span>,</span>}
                 <span className="absolute left-0 top-full block transition-transform duration-300 group-hover:translate-y-[-100%]">
                   {item.name}
                 </span>
