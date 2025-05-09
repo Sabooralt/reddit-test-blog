@@ -31,11 +31,12 @@ export default function Navbar() {
           {navItems.map((item, index) => (
             <li
               key={index}
-              className="relative cursor-pointer group overflow-hidden"
+              className="relative flex flex-row cursor-pointer group overflow-hidden"
             >
               <span className="block transition-transform duration-300 group-hover:-translate-y-full">
                 {item.name}
               </span>
+              <span>,</span>
               <span className="absolute left-0 top-full block transition-transform duration-300 group-hover:translate-y-[-100%]">
                 {item.name}
               </span>
