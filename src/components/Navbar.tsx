@@ -10,10 +10,10 @@ export default function Navbar() {
 
   const navItems = [
     { name: "Home", link: "/" },
-    { name: "Works", link: "/" },
-    { name: "About", link: "/" },
-    { name: "Blog", link: "/" },
-    { name: "Content", link: "/" },
+    { name: "Works", link: "/works" },
+    { name: "About", link: "/about" },
+    { name: "Blog", link: "/blog" },
+    { name: "Content", link: "/content" },
   ];
 
   return (
