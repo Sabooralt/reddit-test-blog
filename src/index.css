@@ -3,5 +3,5 @@
 @tailwind components;
 @tailwind utilities;
 body {
- @apply font-base h-[200vh]
+ @apply font-base overflow-x-hidden
 }
