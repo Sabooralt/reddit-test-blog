@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -29,19 +30,18 @@ export default function Navbar() {
         {/* Desktop Nav */}
         <ul className="hidden md:flex flex-row space-x-6 text-secondary text-xl font-medium">
           {navItems.map((item, index) => (
-            <li
-              key={index}
-              className="relative flex flex-row cursor-pointer group overflow-hidden"
-            >
-              <span className="block transition-transform duration-300 group-hover:-translate-y-full">
-                {item.name}
-              </span>
-              <span>,</span>
-              <span className="absolute left-0 top-full block transition-transform duration-300 group-hover:translate-y-[-100%]">
-                {item.name}
-              </span>
-              <span className="absolute bottom-0 left-0 h-[1px] w-0 bg-black transition-all duration-300 group-hover:w-full"></span>
-            </li>
+            <Link to={item.link} key={index}>
+              <li className="relative flex flex-row cursor-pointer group overflow-hidden">
+                <span className="block transition-transform duration-300 group-hover:-translate-y-full">
+                  {item.name}
+                </span>
+                <span>,</span>
+                <span className="absolute left-0 top-full block transition-transform duration-300 group-hover:translate-y-[-100%]">
+                  {item.name}
+                </span>
+                <span className="absolute bottom-0 left-0 h-[1px] w-0 bg-black transition-all duration-300 group-hover:w-full"></span>
+              </li>
+            </Link>
           ))}
         </ul>
 
@@ -79,13 +79,14 @@ export default function Navbar() {
       >
         <ul className="flex flex-col gap-5 font-[500] text-black bg-white p-4 text-lg font-medium">
           {navItems.map((item, index) => (
-            <li
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              key={index}
-              className="cursor-pointer"
-            >
-              {item.name}
-            </li>
+            <Link to={item.link} key={index}>
+              <li
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="cursor-pointer"
+              >
+                {item.name}
+              </li>
+            </Link>
           ))}
         </ul>
       </div>

@@ -1,19 +1,14 @@
+import { BrowserRouter as Router, Routes, Route, } from "react-router-dom";
 import "./App.css";
-import BlogSection from "./components/BlogSection";
-import Footer from "./components/Footer";
-import InnerSection from "./components/InnerSection";
-import Navbar from "./components/Navbar";
-import { SlidingTextCTA } from "./components/SlidingTextCTA";
+import Home from "./pages/home";
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <InnerSection />
-      <BlogSection />
-      <SlidingTextCTA />
-      <Footer />
-    </>
+    <Router>
+      <Routes>
+        <Route index element={<Home />} />
+      </Routes>
+    </Router>
   );
 }
 
